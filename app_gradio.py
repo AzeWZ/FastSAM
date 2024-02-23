@@ -7,7 +7,7 @@ from PIL import ImageDraw
 import numpy as np
 
 # Load the pre-trained model
-model = YOLO('./weights/FastSAM.pt')
+model = YOLO('./weights/FastSAM-x.pt')
 
 device = torch.device(
     "cuda"
@@ -371,4 +371,4 @@ with gr.Blocks(css=css, title='Fast Segment Anything') as demo:
     clear_btn_t.click(clear_text, outputs=[cond_img_p, segm_img_p, text_box])
 
 demo.queue()
-demo.launch()
+demo.launch(server_address="0.0.0.0")
