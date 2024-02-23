@@ -371,4 +371,4 @@ with gr.Blocks(css=css, title='Fast Segment Anything') as demo:
     clear_btn_t.click(clear_text, outputs=[cond_img_p, segm_img_p, text_box])
 
 demo.queue()
-demo.launch(server_address="0.0.0.0")
+demo.launch(server_name='0.0.0.0')
